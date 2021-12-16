@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "Suppliers";
+}
+
+    <h4>Add Supplier</h4>
+    <div class="col s12">
+        <div class="row">
+            <div class="input-field col s4">
+                <input id="supplier-name" type="text" class="validate">
+                <label for="supplier-name">Supplier Name*</label>
+            </div>
+
+            <div class="input-field col s4">
+                <button type="submit" id="add-supplier" class="waves-effect waves-light btn">ADD SUPPLIER</button>
+            </div>
+        </div>
+        <h4>View Suppliers</h4>
+        <div class="row">
+            <table id="tblSuppliers" class="table responsive-table highlight">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Craeted Date</th>
+                    </tr>
+                </thead>
+                <tbody id="suppliers-body"></tbody>
+            </table>
+        </div>
+    </div>
+
+
+@section Scripts {
+   <script src="~/js/SupppliersView.js" type="text/javascript"></script>
+}

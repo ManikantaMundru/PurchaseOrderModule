@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "PurchaseOrders";
+}
+<h4>Add Puchase Order</h4>
+<div class="row">
+    <div class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="order-code" type="text" class="validate">
+                <label for="order-code">Order Code*</label>
+            </div>
+            <div class="input-field col s6">
+                <select id="select-supplier"></select>
+                <label>Select Supplier*</label>
+            </div>
+        </div>
+        <div id="products-row">
+            <div class="row">
+                <div class="chips">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s5">
+                    <select id="select-product"></select>
+                    <label>Select Product*</label>
+                </div>
+
+                <div class="input-field col s5">
+                    <input id="product-quantity" type="number" class="validate">
+                    <label for="product-quantity">Product Quantity*</label>
+                </div>
+
+                <div class="input-field col s2">
+                    <button type="submit" id="add-product-chip" class="waves-effect waves-light btn">ADD</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea id="order-description" class="materialize-textarea"></textarea>
+                    <label for="order-description">Order Description*</label>
+                </div>
+            </div>
+
+
+            <button type="submit" id="add-purchase-order" class="waves-effect waves-light btn">ADD PURCHASE ORDER</button>
+        </div>
+    </div>
+</div>
+
+
+<h4>View Puchase Orders</h4>
+<div class="row">
+    <table id="tblPurchaseOrders" class="table responsive-table highlight">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Order Code</th>
+                <th>Order Description</th>
+                <th>Total Price</th>
+                <th>Supplier Name</th>
+                <th>Created Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="purchase-orders-body"></tbody>
+    </table>
+</div>
+
+<!-- Modal Structure -->
+<div id="products-modal" class="modal">
+    <div class="modal-content">
+        <h4>View Purchase Order</h4>
+        <table id="tblPurchaseOrders" class="table responsive-table highlight">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Unit Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="product-orders-body"></tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+
+
+    @section Scripts {
+        <script src="~/js/PurchaseOrdersView.js" type="text/javascript"></script>
+    }
+
+
+

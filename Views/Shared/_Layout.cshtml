@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PurchaseOrderModule</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+
+        <nav class="teal darken-4 lighten-1" role="navigation">
+            <div class="nav-wrapper container">
+                <a id="logo-container" href="/" class="brand-logo">
+                   Purchase Orders
+                </a>
+                <ul class="right hide-on-med-and-down">
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Suppliers" asp-action="Suppliers">Suppliers</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Products">Products</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="PurchaseOrders" asp-action="PurchaseOrders">Purchase Orders</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Suppliers" asp-action="Suppliers">Suppliers</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="Products" asp-action="Products">Products</a></li>
+                    <li> <a class="nav-link text-dark" asp-area="" asp-controller="PurchaseOrders" asp-action="PurchaseOrders">Purchase Orders</a></li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+  
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
